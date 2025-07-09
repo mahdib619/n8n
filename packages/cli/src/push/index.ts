@@ -120,7 +120,8 @@ export class Push extends TypedEmitter<PushEvents> {
 			this.logger.warn('Origin header is missing');
 
 			connectionError = 'Invalid origin!';
-		} else if (inProduction) {
+		} else if (true) {
+			console.log('hi orig' + headers.host);
 			const expectedHost =
 				typeof headers['x-forwarded-host'] === 'string'
 					? headers['x-forwarded-host']
